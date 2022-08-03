@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" language="Javascript"
+    src="https://ajax.microsoft.com/ajax/jquery/jquery-3.6.0.min.js"> </script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="BG">
+    <div class="navBar">
+      <ul class="navBarUl">
+      </ul>
+    </div>
+
+    <div class="gameName">
+      <img class="gameNameImg" src="../img/title.png" />
+    </div>
+
+    <div class="template">
+      <div class="templateImg">
+
+      </div>
+      <div class="templateText">
+
+      </div>
+    </div>
+    <div class="bottom">
+      
+    </div>
+  </div>
+  <script>
+
+    $("head").append("<link>");
+    a = $("head").children(":last");
+    a.attr({
+      rel: "stylesheet",
+      type: "text/css",
+      href: './index.css'
+    });
+
+    var liTextArr = ['首页', '介绍', '百科'];
+    var aHrefArr = ['#', 'https://www.baidu.com', '#'];
+    var ul = $('.navBarUl')
+    for (var i = 0; i < liTextArr.length; i++) {
+      ul.append(
+        '<a href=' + aHrefArr[i] + '>' +
+        '<li>' +
+        liTextArr[i] +
+        '</li>' +
+        '</a>'
+      )
+    }
+  </script>
+</body>
+
+</html>

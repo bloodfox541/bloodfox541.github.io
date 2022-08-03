@@ -1,0 +1,95 @@
+* {
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.BG {
+  position: relative;
+  background-image: url('../img/webBG.png');
+  background-size: 64px;
+  width: 100%;
+  min-height: 1080px;
+  min-width: 720px;
+}
+
+.navBar {
+  width: 100%;
+  min-width: 720px;
+  height: 50px;
+  background-color: #005C0C;
+  display: flex;
+  justify-items: center;
+}
+
+.navBarUl {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+
+.navBarUl>a {
+  height: 100%;
+  text-decoration: none;
+}
+
+.navBarUl>a>li:hover {
+  background-color: #3A6905;
+}
+
+.navBarUl>a>li {
+  list-style-type: none;
+  color: aliceblue;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.gameName {
+  position: relative;
+  width: 100%;
+  min-width: 720px;
+  padding-top: calc(80% / 3.5);
+}
+
+.gameNameImg {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.template {
+  position: relative;
+  width: 100%;
+  min-width: 720px;
+  padding-top: 25%;
+}
+
+.templateImg {
+  position: absolute;
+  background-color: #3A6905;
+  left: 10%;
+  width: 65%;
+  height: 100%;
+}
+
+.templateText {
+  position: absolute;
+  background-color: #05694B;
+  left: 74.9%;
+  width: 15%;
+  height: 100%;
+}
+
+.bottom {
+  position: absolute;
+  top: auto;
+  bottom: 0px;
+  background-color: #004209;
+  width: 100%;
+  min-width: 720px;
+  height: 90px;
+}
