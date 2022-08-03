@@ -29,11 +29,26 @@
 
       </div>
     </div>
-    <div id="fgf">
 
+    <div class="template">
+      <div class="templateImg imgRight">
+
+      </div>
+      <div class="templateText textLeft">
+
+      </div>
+    </div>
+
+    <div class="template">
+      <div class="templateText">
+
+      </div>
+      <div class="templateImg">
+
+      </div>
     </div>
     <div class="bottom">
-      
+
     </div>
   </div>
   <script>
@@ -58,6 +73,38 @@
         '</a>'
       )
     }
+
+    $(document).ready(function () {
+      var templateArr = $('.template');
+      var templateTopPosArr = [];
+      for (var i = 0; i < templateArr.length; i++) {
+        templateTopPosArr[i] = $(templateArr[i]).offset().top;
+      }
+      $(templateArr[1]).hide();
+      $(templateArr[2]).hide();
+      console.log(templateTopPosArr);
+      for (var i = 0; i < templateArr.length; i++) {
+          if ($(window).scrollTop() + $(window).height() > templateTopPosArr[i]) {
+            $(templateArr[i]).show(1500);
+          }
+        }
+      $(window).resize(function () {
+        for (var i = 0; i < templateArr.length; i++) {
+          if ($(window).scrollTop() + $(window).height() > templateTopPosArr[i]) {
+            $(templateArr[i]).show(1500);
+          }
+        }
+      });
+      $(window).scroll(() => {
+        for (var i = 0; i < templateArr.length; i++) {
+          if ($(window).scrollTop() + $(window).height() > templateTopPosArr[i]) {
+            $(templateArr[i]).show(1500);
+          }
+        }
+      })
+    })
+
+
   </script>
 </body>
 
